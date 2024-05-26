@@ -20,7 +20,7 @@ let config = require(process.env.BOSTR_CONFIG_PATH || "./config");
 
 let connectedHosts = [];
 
-let wslinkregex = /(?:^- )(wss?:\/\/.*)(?: \(.*\))/gm;
+let wslinkregex = /(?:^- )(wss?:\/\/[^\s]+)/gm;
 let loadbalancerUpstreamLinks = [];
 
 config.server_meta.version = version;
